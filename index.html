@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>D'MARYS | INICIO</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta name="keywords" content="PARRILLAS, POLLOS A LA BRASA, POLLERIA, DELIVERY, CHORRILLOS, SANTIAGO DE SURCO">
+    <meta name="description" content="POLLERIA D'MARYS: Ofrece deliciosos pollos a la brasa con exquisitas cremas
+    en todo Chorrillos y Santiago de Surco, incluye delivery.">
+    <meta name="author" content="Karla Gonzáles Morán">
+    <link rel="shortcut icon" href="assets/icons/pollo.png">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.1/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+</head>
+
+<body>
+    <div id="wrapper">
+        <header>
+            <div class="container-header">
+                <div class="item-2 logo animate__animated animate__fadeInDown">
+                    <img src="assets/img/logo.png" alt="Logo" class="logo-img">
+                    <h2 class="name-header pt-3">POLLERIA D'MARYS</h2>
+                </div>
+                <div class="item-2 icons-header text-center pt-3">
+                    <div>
+                        <i class="fa fa-phone icon-header"></i>
+                        <p class="text-icon-header">99999999</p>
+                    </div>
+                    <div>
+                        <a id="login" href="pages/login.html">
+                            <i class="fa fa-user icon-header"></i>
+                            <p class="text-icon-header mr-1" id="nameUser">Bienvenid@</p>
+                        </a>
+                    </div>
+                    <div class="pr-3">
+                        <a id="icon-carrito" onclick="verCarrito()">
+                            <i class="fa icon-header">&#xf07a;</i>
+                            <span class='badge badge-warning' id='lblCartCount' style="display: none;"> ! </span>
+                            <p class="text-icon-header mr-3" id="total">S/0.00</p>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+
+        <section id="content">
+            <div id="nav">
+                <ul>
+                    <li><a href="index.html" class="selected">PROMOCIONES</a>
+                    </li>
+                    <li><a href="pages/locales.html">LOCALES</a>
+                        <ul>
+                            <li><a href="pages/locales.html">SURCO</a></li>
+                            <li><a href="pages/locales.html">CHORRILLOS</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="pages/contacto.html">CONTÁCTANOS</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-12">
+                <div class="text-center animate__animated animate__backInDown">
+                    <div class="container">
+                        <div id="carousel" class="carousel slide size-carousel" data-ride="carousel">
+                            <!-- Indicators -->
+                            <ul class="carousel-indicators">
+                                <li data-target="#carousel" data-slide-to="0" class="active"></li>
+                                <li data-target="#carousel" data-slide-to="1"></li>
+                                <li data-target="#carousel" data-slide-to="2"></li>
+                                <li data-target="#carousel" data-slide-to="3"></li>
+                            </ul>
+                            <!-- The slideshow -->
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="assets/img/promo1.jpg" alt="Promo 1">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="assets/img/promo2.jpg" alt="Promo 2">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="assets/img/promo3.jpg" alt="Promo 3">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="assets/img/promo4.jpg" alt="Promo 4">
+                                </div>
+                            </div>
+                            <!-- Left and right controls -->
+                            <a class="carousel-control-prev" href="#carousel" data-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </a>
+                            <a class="carousel-control-next" href="#carousel" data-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h1 class="text-center pt-3"><u><b>PROMOCIONES</b></u></h1>
+            <div class="container-fluid pb-5">
+                <div class="row">
+                    <!-- Elementos generados a partir del JSON -->
+                    <main id="items" class="col-lg-12 col-md-12 row"></main>
+                    <!-- Carrito -->
+                    <aside class="col-lg-4 col-md-2 carrito">
+                        <h2 class="pt-3 text-center">Carrito</h2>
+                        <ul id="carrito" class="list-group"></ul>
+                        <hr>
+                        <p class="text-right">Total: <span id="totalCarrito">S/0.00</span></p>
+                        <button id="boton-vaciar" class="btn btn-danger pull-right"
+                            style="display: none;">Vaciar</button>
+                        <button id="boton-confirmar" class="btn btn-success pull-right mr-1"
+                            style="display: none;">Confirmar</button>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="items-footer animate__animated animate__slideInLeft pb-2">
+                <div class="item-4">
+                    <img src="assets/img/logo.png" alt="Logo" class="logo-img">
+                </div>
+                <div class="mt-1 item-4">
+                    <h5 class="pb-2"><b>Contáctanos</b></h5>
+                    <p class="mr-3"> <i class="fa fa-phone"></i><span
+                            style="margin-left: -8px;font-size: 18px;">999999999</span></p>
+                </div>
+                <div class="mt-1 item-4">
+                    <h5 class="pb-2"><b>Medios de Pago</b></h5>
+                    <i class="fa fa-paypal"></i>
+                    <i class="fa fa-money"></i>
+                    <i class="fa fa-credit-card"></i>
+                </div>
+                <div class="mt-1 item-4">
+                    <h5 class="pb-2"><b>Síguenos en</b></h5>
+                    <i href="#" class="fa fa-facebook"></i>
+                    <i href="#" class="fa fa-instagram"></i>
+                    <i href="#" class="fa fa-youtube"></i>
+                </div>
+            </div>
+        </footer>
+
+        <div class="fixed-whatsapp">
+            <img class="icono-contactenos" src="assets/icons/whatsapp-icon-64px.png" alt="Icono de Whatsapp"
+                data-toggle="tooltip" data-placement="left" title="Whatsappeame!"
+                onclick="window.open('https://api.whatsapp.com/send?phone=51987654321&text=Hola')">
+        </div>
+    </div>
+    <script type="text/javascript" src="assets/js/eventos.js"></script>
+    <script type="text/javascript" src="assets/js/carrito.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/luxon@2.3.0/build/global/luxon.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

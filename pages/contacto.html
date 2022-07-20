@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>D'MARYS | CONTÁCTANOS</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta name="keywords" content="PARRILLAS, POLLOS A LA BRASA, POLLERIA, DELIVERY, CHORRILLOS, SANTIAGO DE SURCO">
+    <meta name="description" content="POLLERIA D'MARYS: Ofrece una atención rápida y amable a todos sus clientes, para que puedan
+    disfrutar de sus deliciosos pollos a la brasa y las exquisitas cremas.">
+    <meta name="author" content="Karla Gonzáles Morán">
+    <link rel="shortcut icon" href="../assets/icons/pollo.png">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.1/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+
+<body>
+    <div id="wrapper">
+        <header>
+            <div class="container-header">
+                <div class="item-2 logo animate__animated animate__fadeInDown">
+                    <img src="../assets/img/logo.png" alt="Logo" class="logo-img">
+                    <h2 class="name-header pt-3">POLLERIA D'MARYS</h2>
+                </div>
+                <div class="item-2 icons-header text-center pt-3">
+                    <div>
+                        <i class="fa fa-phone icon-header"></i>
+                        <p class="text-icon-header">99999999</p>
+                    </div>
+                    <div>
+                        <a id="login" href="login.html">
+                            <i class="fa fa-user icon-header"></i>
+                            <p class="text-icon-header mr-1" id="nameUser"></p>
+                        </a>
+                    </div>
+
+                    <div class="pr-3">
+                        <a href="../index.html" onclick="mostrarCarrito()">
+                            <i class="fa icon-header">&#xf07a;</i>
+                            <span class='badge badge-warning' id='lblCartCount' style="display: none;"> ! </span>
+                            <p class="text-icon-header mr-3" id="total">S/0.00</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section id="content">
+            <div id="nav">
+                <ul>
+                    <li><a href="../index.html">PROMOCIONES</a>
+                    </li>
+                    <!-- <li><a href="carta.html">CARTA</a>
+                    </li> -->
+                    <li><a href="locales.html">LOCALES</a>
+                        <ul>
+                            <li><a href="locales.html">SURCO</a></li>
+                            <li><a href="locales.html">CHORRILLOS</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contacto.html" class="selected">CONTÁCTANOS</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="container">
+                <div class="row pb-lg-5 pb-md-1">
+                    <div id="form-data" class="col-lg-6 col-md-8 col-xs-12 ml-auto mr-auto">
+                        <form id="form">
+                            <div class="card animate__animated animate__backInDown">
+                                <h2 class="text-center tittle-card"><u><b>CONTÁCTANOS</b></u></h2>
+                                <div class="row pt-3">
+                                    <div class="col-sm-6 col-xs-12 form-group">
+                                        <label for="nombres">Nombres</label>
+                                        <input type="text" class="form-control" name="nombres" id="nombres" required>
+                                    </div>
+                                    <div class="col-sm-6 col-xs-12 form-group">
+                                        <label for="apellidos">Apellidos</label>
+                                        <input type="text" class="form-control" name="apellidos" id="apellidos"
+                                            required>
+                                    </div>
+                                    <div class="col-sm-6 col-xs-12 form-group">
+                                        <label for="tel">Teléfono</label>
+                                        <input type="tel" class="form-control" name="tel" id="tel" required>
+                                    </div>
+                                    <div class="col-sm-6 col-xs-12 form-group">
+                                        <label for="correo">Correo</label>
+                                        <input type="email" class="form-control" name="correo" id="correo">
+                                    </div>
+                                    <div class="col-sm-6 col-xs-12 form-group">
+                                        <label for="local">Local</label>
+                                        <select name="local" id="local" class="form-control"
+                                            style="height: auto !important;" required>
+                                            <option value="">Escoge un local</option>
+                                            <option>Chorrillos</option>
+                                            <option>Surco</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-6 col-xs-12 form-group">
+                                        <label for="asunto">Asunto</label>
+                                        <input type="text" class="form-control" name="asunto" id="asunto" required>
+                                    </div>
+                                    <div class="col-sm-12 form-group">
+                                        <label for="mensaje">Mensaje</label>
+                                        <textarea class="form-control" rows="2" name="mensaje" id="mensaje"
+                                            required></textarea>
+                                    </div>
+                                    <div style="display: none;">
+                                        <input type="text" name="cc" id="cc">
+                                    </div>
+                                    <div class="col-12 text-center">
+                                        <input type="submit" class="btn btn-primary btn-lg active" id="button"
+                                            value="Enviar">
+                                        <button type="reset" class="btn btn-danger btn-lg active">Limpiar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <footer>
+            <div class="items-footer animate__animated animate__slideInLeft pb-2">
+                <div class="item-4">
+                    <img src="../assets/img/logo.png" alt="Logo" class="logo-img">
+                </div>
+                <div class="mt-1 item-4">
+                    <h5 class="pb-2"><b>Contáctanos</b></h5>
+                    <p class="mr-3"> <i class="fa fa-phone"></i><span
+                            style="margin-left: -8px;font-size: 18px;">999999999</span></p>
+                </div>
+                <div class="mt-1 item-4">
+                    <h5 class="pb-2"><b>Medios de Pago</b></h5>
+                    <i class="fa fa-paypal"></i>
+                    <i class="fa fa-money"></i>
+                    <i class="fa fa-credit-card"></i>
+                </div>
+                <div class="mt-1 item-4">
+                    <h5 class="pb-2"><b>Síguenos en</b></h5>
+                    <i href="#" class="fa fa-facebook"></i>
+                    <i href="#" class="fa fa-instagram"></i>
+                    <i href="#" class="fa fa-youtube"></i>
+                </div>
+            </div>
+        </footer>
+        <div class="fixed-whatsapp">
+            <img class="icono-contactenos" src="../assets/icons/whatsapp-icon-64px.png" alt="Icono de Whatsapp"
+                data-toggle="tooltip" data-placement="left" title="Whatsappeame!"
+                onclick="window.open('https://api.whatsapp.com/send?phone=51987654321&text=Hola')">
+        </div>
+    </div>
+    <script type="text/javascript" src="../assets/js/eventos.js"></script>
+    <script type="text/javascript" src="../assets/js/contacto.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        emailjs.init('iPrOnMC99AzJE3utV')
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
