@@ -162,6 +162,7 @@ footer {
 #wrapper {
   min-height: 100%;
   position: relative;
+  background-repeat: round;
   background-image: url("../img/background_1.jpg");
 }
 

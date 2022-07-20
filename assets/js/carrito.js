@@ -220,6 +220,7 @@ function verCarrito() {
     }
 }
 
+
 function mostrarPedido() {
     const DateTime = luxon.DateTime;
     Swal.fire({
@@ -228,11 +229,12 @@ function mostrarPedido() {
             '<br><br><b>Total: ' + sessionStorage.getItem('total') + '</b>',
         icon: 'success'
     })
+    vaciarCarrito();
     verCarrito();
 }
 // Eventos
 DOMbotonVaciar.addEventListener('click', vaciarCarrito);
-DOMbotonConfirmar.onclick = () => { vaciarCarrito(); mostrarPedido(); };
+DOMbotonConfirmar.onclick = () => { mostrarPedido(); };
 DOMaside.style.display = 'none';
 
 
