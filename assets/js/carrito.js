@@ -222,15 +222,25 @@ function verCarrito() {
 
 
 function mostrarPedido() {
-    const DateTime = luxon.DateTime;
-    Swal.fire({
-        title: 'Pedido confirmado!',
-        html: 'Fecha: ' + DateTime.now().toLocaleString(DateTime.DATETIME_SHORT) +
-            '<br><br><b>Total: ' + sessionStorage.getItem('total') + '</b>',
-        icon: 'success'
-    })
-    vaciarCarrito();
-    verCarrito();
+    if (!sessionStorage.getItem('user')) {
+        mostrarAlerta('Debe iniciar sesión antes de confirmar su pedido!', 'red');
+        setTimeout(() => {
+            window.location.href = 'pages/login.html'
+        }, 1500)
+    }
+    else {
+        const DateTime = luxon.DateTime;
+        Swal.fire({
+            title: 'Pedido confirmado!',
+            html: 'Fecha: ' + DateTime.now().toLocaleString(DateTime.DATETIME_SHORT) +
+                '<br><br><b>Total: ' + sessionStorage.getItem('total') + '</b>',
+            icon: 'success'
+        })
+        vaciarCarrito();
+        verCarrito();
+    }
+
+
 }
 // Eventos
 DOMbotonVaciar.addEventListener('click', vaciarCarrito);
